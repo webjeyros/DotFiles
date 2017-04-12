@@ -1,0 +1,53 @@
+#! /bin/sh
+bspc monitor -d web code term fm remote wm im 
+
+bspc config border_width         1 
+bspc config window_gap           5 
+
+bspc config split_ratio          0.52
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+bspc rule -a Rambox desktop=^7
+bspc rule -a virtualbox desktop=^6 floating=on
+
+bspc config super mod4
+bspc config pointer_action1 move
+bspc config pointer_action2 none
+bspc config pointer_action3 resize_corner
+bspc config click_to_focus true
+bspc config focus_follows_pointer false
+
+bspc config auto_alternate true
+bspc config auto_cancel true
+
+bspc config normal_border_color "#E6DB74"
+bspc config active_border_color "#a6e22e"
+bspc config focused_border_color "#a6e22e"
+bspc config presel_border_color "#E6DB74"
+bspc config urgent_border_color "#E6DB74"
+bspc config focused_locked_border_color "#E6DB74"
+bspc config normal_frame_opacity 0.0
+bspc config focused_frame_opacity 0.1
+bspc config presel_feedback_color "#E6DB74"
+
+xsetroot -cursor_name left_ptr
+ 
+sxhkd &
+
+xrdb -merge ~/.Xdefaults
+
+polybar -r mybar &
+
+#fix idea
+wmname LG3D &
+
+#blueberry-tray &
+
+#feh --bg-fill ~/desktop.png &
+nm-applet &
+rambox &
+
+
+
+
