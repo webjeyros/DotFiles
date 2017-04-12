@@ -1,4 +1,4 @@
-#DotFiles
+# DotFiles
 My configs of:
 
 * urxvt
@@ -6,5 +6,5 @@ My configs of:
 * sxhkd
 * polybar
 
-##Screenshot
+## Screenshot
 ![Screenshot](screenshot.png)
